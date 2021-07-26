@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome</title>
+	<style type="text/css">
+		#h2{
+			transform: .5s;
+			animation-name: spin;
+			animation-duration: 5000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+			}
+		#divs{
+			 border:2px solid yellow;
+             border-radius: 5px;
+             padding: 15px;
+             width : 200px;
+             background-color: cyan;
+		}
+		@keyframes spin{
+			from{
+				transform:rotate(0deg);
+			}
+			to{
+				transform: rotate(360deg);
+			}
+		}
+		
+	</style>
+	
+</head>
+<center>
+<body>
+	<div id="divs">
+	<label>Enter Text Here</label>
+	<input type="text" id="input">
+	<button onclick="display();">Click Here!</button>
+
+	<h2 id="h2">Hello</h2>
+
+
+	<script type="text/javascript">
+		function display() {
+			var num1 =  document.getElementById("input").value;
+			 document.getElementById("h2").innerHTML = num1;
+		}
+	</script>
+</div>
+</body>
+</center>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	#divs{
+			 border:2px solid cyan;
+             border-radius: 5px;
+             padding: 15px;
+             width : 200px;
+             background-color: yellow;
+         </style>
+</head>
+<center>
+<body>
+	<div id="divs">
+	<label>First Number:</label>
+	<input type="text" id="f1"/>
+	<br>
+	<br>
+	<label>Second Number:</label>
+	<input type="text" id="f2"/><br>
+	<br>
+	<br>
+	<button onclick="addition();">+</button>
+	<button onclick="subtract();">-</button>
+	<button onclick="multiply();">*</button>
+	<button onclick="divide();">/</button><br>
+	<br>
+	<label id="result"></label>
+<script type="text/javascript">
+	function addition() {
+		var num1 = Number.parseInt(document.getElementById("f1").value);
+		var num2 = Number.parseInt(document.getElementById("f2").value);
+		var num3 = document.getElementById("result").innerHTML = num1 + num2;
+		
+	}
+	function subtract() {
+		num1 = document.getElementById("f1").value;
+		num2 = document.getElementById("f2").value;
+		document.getElementById("result").innerHTML = num1 - num2;
+}
+function multiply() {
+		num1 = document.getElementById("f1").value;
+		num2 = document.getElementById("f2").value;
+		document.getElementById("result").innerHTML = num1 * num2;
+}
+function divide() {
+		num1 = document.getElementById("f1").value;
+		num2 = document.getElementById("f2").value;
+		document.getElementById("result").innerHTML = num1 / num2;
+}
+
+</script>
+<div>
+</body>
+<center>
+</html>

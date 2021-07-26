@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    
+    #divs{
+       border:3px solid cyan;
+             border-radius: 5px;
+             padding: 20px;
+             width : 300px;
+             background-color: pink;
+
+         </style>
+<body>
+<div id="divs">
+<p>Example list:</p>
+<ul id="myList"><li id="item1">Ronalyn (previous sibling)</li><li id="item2">Calamba(Last Child)</li></ul>
+
+<button onclick="myFunction()">Click Here!</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var list = document.getElementById("myList").lastChild.innerText;
+  var x = document.getElementById("item2").previousSibling.innerText;
+  document.getElementById("demo").innerText = list + " " + x;
+}
+</script>
+</div>
+</body>
+</html>

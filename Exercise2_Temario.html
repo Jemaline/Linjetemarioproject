@@ -1,0 +1,64 @@
+<html>
+	<style type="text/css">
+		
+		#divs{
+			 border:2px solid yellow;
+             border-radius: 5px;
+             padding: 25px;
+             width : 300px;
+             background-color: cyan;
+
+         </style>
+	<body>
+	
+	<br><br><br>
+	<center>
+	<div id= "divs">
+
+		<p id = "count"> 0 </p>
+		
+		<p id="b">Font Size by 1 Pixel</p>
+
+		<button onclick="clickEvent()";>Click Me Here!</button>
+	</center>
+	
+	</body>
+	
+	<script>
+		
+		var count = 0;
+		
+		var size = 15;
+		
+		function increment(){
+		  count++;
+		 
+		  var text = document.getElementById("count");
+		  text.innerHTML = count;
+		 
+
+		  size++;
+		  text.style.fontSize = size;
+}
+		function increaseFontSizeBy100px() {
+        document.getElementById('a').style.fontSize = "100px";
+    }
+
+   		 function increaseFontSizeBy1px() {
+        var id = document.getElementById('b');
+        var style = window.getComputedStyle(id, null).getPropertyValue('font-size');
+        var currentSize = parseInt(style);
+        currentSize++;
+        document.getElementById('b').style.fontSize = currentSize.toString();
+    }
+		
+function clickEvent(){
+    increment();
+    increaseFontSizeBy1px();
+}
+
+
+		
+	</script>
+	</div>
+</html>

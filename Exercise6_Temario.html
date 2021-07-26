@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="makePage();">Click Here</button>
+<h1>I am an H1</h1>
+<p>This is paragraph followed by a list</p><br>
+<p>I. This is the first</p>
+<label id="container"></label>
+
+
+<script>
+function makePage() {
+  var node = document.createElement("p");
+  var textnode = document.createTextNode("II. This is the second");
+  node.appendChild(textnode);
+  document.getElementById("container").appendChild(node);
+}
+</script>
+
+</body>
+</html>

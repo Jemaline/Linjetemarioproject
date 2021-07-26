@@ -1,0 +1,56 @@
+<html>
+<style type="text/css">
+		
+		#divs{
+			 border:3px solid red;
+             border-radius: 5px;
+             padding: 25px;
+             width : 300px;
+             background-color: cyan;
+
+         </style>
+	<center>
+	<body>
+	<div id="divs">
+	
+		<ul id="list"></ul>
+		<li id="count">0</li>
+		<p id="b">Font Size by 1 Pixel</p>
+		<button onclick="mainevent();">Click Me Here!</button>
+	
+	<script>
+		
+		var count = 0;
+		
+		
+		function increment(){
+		  count++;
+		  
+		  var node = document.createElement("li");
+		  var textnode = document.createTextNode(count);
+		  node.appendChild(textnode);
+		  document.getElementById("count").appendChild(node);
+		  
+		  
+		}
+			function increaseFontSizeBy100px() {
+        document.getElementById('a').style.fontSize = "100px";
+    }
+		function increaseFontSizeBy1px() {
+        var id = document.getElementById('b');
+        var style = window.getComputedStyle(id, null).getPropertyValue('font-size');
+        var currentSize = parseInt(style);
+        currentSize++;
+        document.getElementById('b').style.fontSize = currentSize.toString();
+    }
+    function mainevent(){
+
+    	increment();
+    	increaseFontSizeBy1px();
+    }
+		
+	</script>
+</div>
+	</body>
+	</center>
+</html>
